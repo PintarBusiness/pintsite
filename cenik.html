@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="sl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- SEO -->
+  <title>Izdelava spletnih strani | PintSite</title>
+  <meta name="description" content="Profesionalna izdelava modernih spletnih strani. Hitre, SEO optimizirane in prilagojene za vse naprave. Kontaktirajte PintSite še danes.">
+  <meta name="keywords" content="izdelava spletnih strani, spletne strani, web design, SEO, PintSite">
+  <meta name="author" content="Jure Pintar">
+
+  <!-- Open Graph (za social media) -->
+  <meta property="og:title" content="Izdelava spletnih strani | PintSite">
+  <meta property="og:description" content="Modern design, hitrost in SEO optimizacija za tvojo spletno stran.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.pintsite.si">
+  <meta property="og:image" content="https://www.pintsite.si/preview.jpg">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- FAVICON -->
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+
+  <!-- GOOGLE FONTS (modern, clean) -->
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- FONT AWESOME -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header class="header" id="header">
+    <div class="header-inner">
+
+        <!-- LOGO -->
+        <a href="index.html" class="logo">
+            <img src="Logopravitext.png" alt="PintSite Logo">
+        </a>
+
+        <!-- CENTER WRAP -->
+        <div class="header-center" id="header-center">
+            <nav class="nav" id="nav">
+                <a href="index.html">Domov</a>
+                <a href="storitve.html">Storitve</a>
+                <a href="cenik.html">Cenik</a>
+                <a href="reference.html">Reference</a>
+                <a href="onas.html">O nas</a>
+            </nav>
+
+            <a href="kontakt.html" class="cta-btn">
+            Pošlji povpraševanje
+            </a>
+        </div>
+
+        <!-- MOBILE -->
+        <div class="menu-toggle" id="menu-toggle" aria-label="Odpri meni" aria-expanded="false" aria-controls="header-center">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+    </div>
+    </header>
+
+    <!-- HEADER SCRIPT -->
+    <script>
+        const toggle = document.getElementById("menu-toggle");
+        const headerCenter = document.getElementById("header-center");
+        const header = document.getElementById("header");
+
+        toggle.addEventListener("click", () => {
+        headerCenter.classList.toggle("active");
+        toggle.classList.toggle("active");
+
+        const isOpen = headerCenter.classList.contains("active");
+        toggle.setAttribute("aria-expanded", isOpen ? "true" : "false");
+        });
+
+        window.addEventListener("scroll", () => {
+        if (window.scrollY > 50) {
+            header.classList.add("scrolled");
+        } else {
+            header.classList.remove("scrolled");
+        }
+        });
+    </script>
+
+    <main>
+    <!-- HERO -->
+    <section class="page-hero pricing-hero">
+      <div class="section-container center">
+        <span class="section-badge">Cenik</span>
+        <h1>Izberi paket, ki najbolj ustreza tvojemu <span>podjetju</span></h1>
+        <p>
+          Jasna in profesionalna ponudba za izdelavo moderne spletne strani.
+          Izberi rešitev glede na obseg, cilje in željen nivo predstavitve.
+        </p>
+      </div>
+    </section>
+
+    <!-- PRICING -->
+    <section class="pricing-section">
+      <div class="section-container">
+        <div class="pricing-grid">
+
+          <!-- START -->
+          <article class="pricing-card">
+            <div class="pricing-top">
+              <span class="pricing-label">Start</span>
+              <h2>Za odličen začetek</h2>
+              <p>
+                Primeren paket za manjša podjetja, obrtnike in posameznike,
+                ki želijo profesionalno spletno predstavitev.
+              </p>
+            </div>
+
+            <div class="pricing-price">
+              <span class="price">od 490€</span>
+              <small>enkratni projekt</small>
+            </div>
+
+            <ul class="pricing-features">
+              <li><i class="fa-solid fa-check"></i> Moderna 1–3 podstrani</li>
+              <li><i class="fa-solid fa-check"></i> Responsive dizajn</li>
+              <li><i class="fa-solid fa-check"></i> Kontaktna sekcija</li>
+              <li><i class="fa-solid fa-check"></i> Osnovna SEO priprava</li>
+              <li><i class="fa-solid fa-check"></i> Hitra in čista postavitev</li>
+            </ul>
+
+            <a href="kontakt.html" class="pricing-btn">Izberi Start</a>
+          </article>
+
+          <!-- GROWTH -->
+          <article class="pricing-card featured">
+            <div class="pricing-badge">Najbolj izbrano</div>
+
+            <div class="pricing-top">
+              <span class="pricing-label">Growth</span>
+              <h2>Najboljše razmerje</h2>
+              <p>
+                Prava izbira za podjetja, ki želijo bolj dodelano spletno stran,
+                več vsebine in močnejši profesionalen vtis.
+              </p>
+            </div>
+
+            <div class="pricing-price">
+              <span class="price">od 890€</span>
+              <small>enkratni projekt</small>
+            </div>
+
+            <ul class="pricing-features">
+              <li><i class="fa-solid fa-check"></i> Moderna 4–6 podstrani</li>
+              <li><i class="fa-solid fa-check"></i> Premium responsive dizajn</li>
+              <li><i class="fa-solid fa-check"></i> Naprednejša struktura vsebine</li>
+              <li><i class="fa-solid fa-check"></i> SEO osnova + boljša priprava</li>
+              <li><i class="fa-solid fa-check"></i> Sekcije za storitve / reference</li>
+              <li><i class="fa-solid fa-check"></i> Večji fokus na konverziji</li>
+            </ul>
+
+            <a href="kontakt.html" class="pricing-btn featured-btn">Izberi Growth</a>
+          </article>
+
+          <!-- PREMIUM -->
+          <article class="pricing-card">
+            <div class="pricing-top">
+              <span class="pricing-label">Premium</span>
+              <h2>Za resen nastop</h2>
+              <p>
+                Za podjetja in znamke, ki želijo najmočnejši vtis,
+                bolj unikatno strukturo in višji nivo predstavitve.
+              </p>
+            </div>
+
+            <div class="pricing-price">
+              <span class="price">od 1490€</span>
+              <small>enkratni projekt</small>
+            </div>
+
+            <ul class="pricing-features">
+              <li><i class="fa-solid fa-check"></i> Večstranska premium predstavitev</li>
+              <li><i class="fa-solid fa-check"></i> Unikatnejši dizajn</li>
+              <li><i class="fa-solid fa-check"></i> Napredna struktura strani</li>
+              <li><i class="fa-solid fa-check"></i> Več sekcij in prodajni fokus</li>
+              <li><i class="fa-solid fa-check"></i> SEO priprava in optimizacija</li>
+              <li><i class="fa-solid fa-check"></i> Prioritetna izvedba</li>
+            </ul>
+
+            <a href="kontakt.html" class="pricing-btn">Izberi Premium</a>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- INFO -->
+    <section class="pricing-info-section">
+      <div class="section-container">
+        <div class="section-heading center">
+          <span class="section-badge">Pomembne informacije</span>
+          <h2>Kaj je dobro vedeti pred začetkom</h2>
+          <p>
+            Vsak projekt je lahko nekoliko drugačen, zato je končna cena odvisna
+            od obsega strani, željenih funkcionalnosti in količine vsebine.
+          </p>
+        </div>
+
+        <div class="pricing-info-grid">
+          <div class="pricing-info-card">
+            <i class="fa-solid fa-layer-group"></i>
+            <h3>Prilagodljiv obseg</h3>
+            <p>
+              Paketi so osnova. Po potrebi se ponudba prilagodi tvojemu projektu.
+            </p>
+          </div>
+
+          <div class="pricing-info-card">
+            <i class="fa-solid fa-pen-to-square"></i>
+            <h3>Besedila in vsebina</h3>
+            <p>
+              Če že imaš pripravljena besedila in slike, je izvedba hitrejša in bolj enostavna.
+            </p>
+          </div>
+
+          <div class="pricing-info-card">
+            <i class="fa-solid fa-comments"></i>
+            <h3>Dogovor pred začetkom</h3>
+            <p>
+              Pred začetkom se natančno dogovoriva o cilju strani, strukturi in izgledu.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-section">
+      <div class="section-container">
+        <div class="cta-box">
+          <span class="section-badge light">Povpraševanje</span>
+          <h2>Nisi prepričan, kateri paket je pravi?</h2>
+          <p>
+            Pošlji kratko povpraševanje in svetoval ti bom, katera rešitev je najbolj primerna
+            za tvoje podjetje, ponudbo in cilje.
+          </p>
+
+          <div class="cta-actions">
+            <a href="kontakt.html" class="hero-btn primary">Pošlji povpraševanje</a>
+            <a href="storitve.html" class="hero-btn secondary white">Poglej storitve</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+
+<!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-container">
+        
+        <div class="footer-brand">
+        <a href="index.html" class="footer-logo">PintSite</a>
+        <p>
+            Profesionalna izdelava modernih spletnih strani za podjetja, storitve in osebne znamke.
+        </p>
+        </div>
+
+        <div class="footer-links">
+        <h4>Navigacija</h4>
+        <a href="index.html">Domov</a>
+        <a href="reference.html">Reference</a>
+        <a href="storitve.html">Storitve</a>
+        <a href="cenik.html">Cenik</a>
+        <a href="kontakt.html">Kontakt</a>
+        </div>
+
+        <div class="footer-links">
+        <h4>Kontakt</h4>
+        <a href="mailto:info@pintsite.si">info@pintsite.si</a>
+        <a href="tel:+38640123456">+386 40 123 456</a>
+        <a href="kontakt.html">Pošlji povpraševanje</a>
+        </div>
+
+        <div class="footer-links">
+        <h4>Sledi mi</h4>
+        <div class="social-links">
+            <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i> Instagram</a>
+            <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i> Facebook</a>
+            <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i> LinkedIn</a>
+        </div>
+        </div>
+
+    </div>
+
+    <div class="footer-bottom">
+        <p>© 2026 PintSite. Vse pravice pridržane.</p>
+        <div class="footer-bottom-links">
+        <a href="#">Politika zasebnosti</a>
+        <a href="#">Pogoji uporabe</a>
+        </div>
+    </div>
+    </footer>
+
+</body>
+</html>
