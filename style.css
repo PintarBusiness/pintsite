@@ -1410,3 +1410,559 @@ body {
     margin-bottom: 1em;
   }
 }
+
+/*KOONTAKT CSS */
+/* CONTACT HERO */
+.contact-hero {
+  padding-top: 8em;
+  padding-bottom: 2.5em;
+}
+
+/* CONTACT SECTION */
+.contact-section {
+  padding: 2em 0 6em;
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 1.6em;
+  align-items: start;
+}
+
+/* FORM CARD */
+.contact-form-card {
+  background: rgba(255, 255, 255, 0.82);
+  border: 0.0625em solid rgba(15, 23, 42, 0.06);
+  border-radius: 1.8em;
+  padding: 2em;
+  box-shadow: 0 1.2em 2.8em rgba(15, 23, 42, 0.05);
+}
+
+.contact-form-heading {
+  margin-bottom: 1.6em;
+}
+
+.contact-form-heading h2 {
+  font-size: clamp(1.8rem, 3vw, 2.5rem);
+  line-height: 1.1;
+  margin-bottom: 0.4em;
+  letter-spacing: -0.03em;
+}
+
+.contact-form-heading p {
+  color: var(--text-light);
+  line-height: 1.8;
+  max-width: 42em;
+}
+
+/* FORM */
+.contact-form {
+  display: grid;
+  gap: 1.2em;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1em;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.55em;
+}
+
+.form-group label {
+  font-weight: 700;
+  color: var(--text);
+  font-size: 0.95rem;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  border: 0.0625em solid rgba(15, 23, 42, 0.08);
+  background: rgba(255, 255, 255, 0.92);
+  border-radius: 1em;
+  padding: 1em 1.05em;
+  font-family: "Manrope", sans-serif;
+  font-size: 0.98rem;
+  color: var(--text);
+  outline: none;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+  color: #94a3b8;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  border-color: rgba(37, 99, 235, 0.35);
+  box-shadow: 0 0 0 0.25em rgba(37, 99, 235, 0.08);
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 10em;
+}
+
+.form-submit-btn {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: fit-content;
+  padding: 1em 1.5em;
+  border: none;
+  border-radius: 999em;
+  background: linear-gradient(135deg, var(--primary), #3b82f6);
+  color: #ffffff;
+  font-family: "Manrope", sans-serif;
+  font-size: 0.96rem;
+  font-weight: 800;
+  cursor: pointer;
+  box-shadow: 0 1em 2.2em rgba(37, 99, 235, 0.22);
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.form-submit-btn:hover {
+  transform: translateY(-0.12em);
+  box-shadow: 0 1.2em 2.6em rgba(37, 99, 235, 0.28);
+}
+
+/* RIGHT SIDE */
+.contact-info-wrap {
+  display: grid;
+  gap: 1.2em;
+}
+
+.main-info-card {
+  padding: 2em;
+  border-radius: 1.8em;
+  background: linear-gradient(135deg, var(--primary), var(--accent));
+  color: #ffffff;
+  box-shadow: 0 1.6em 3.5em rgba(15, 23, 42, 0.12);
+  position: relative;
+  overflow: hidden;
+}
+
+.main-info-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at top left, rgba(255,255,255,0.22), transparent 40%);
+  pointer-events: none;
+}
+
+.main-info-card > * {
+  position: relative;
+  z-index: 1;
+}
+
+.main-info-card h3 {
+  font-size: 1.85rem;
+  line-height: 1.18;
+  margin-bottom: 0.65em;
+}
+
+.main-info-card p {
+  color: rgba(255, 255, 255, 0.92);
+  line-height: 1.8;
+  margin-bottom: 1.6em;
+}
+
+.contact-points {
+  display: grid;
+  gap: 1em;
+}
+
+.contact-point {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.9em;
+  padding: 1em 1.05em;
+  background: rgba(255, 255, 255, 0.14);
+  border: 0.0625em solid rgba(255, 255, 255, 0.18);
+  border-radius: 1.1em;
+}
+
+.contact-point i {
+  width: 2.2em;
+  height: 2.2em;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.18);
+  flex-shrink: 0;
+}
+
+.contact-point strong {
+  display: block;
+  margin-bottom: 0.15em;
+  font-size: 0.98rem;
+}
+
+.contact-point span {
+  color: rgba(255, 255, 255, 0.9);
+  line-height: 1.6;
+  font-size: 0.95rem;
+}
+
+/* MINI CARDS */
+.contact-mini-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1em;
+}
+
+.contact-mini-card {
+  background: rgba(255, 255, 255, 0.82);
+  border: 0.0625em solid rgba(15, 23, 42, 0.06);
+  border-radius: 1.4em;
+  padding: 1.4em;
+  box-shadow: 0 1em 2em rgba(15, 23, 42, 0.05);
+}
+
+.contact-mini-card i {
+  width: 2.8em;
+  height: 2.8em;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.9em;
+  background: linear-gradient(135deg, rgba(37, 99, 235, 0.12), rgba(6, 182, 212, 0.14));
+  color: var(--primary);
+  margin-bottom: 1em;
+}
+
+.contact-mini-card h4 {
+  font-size: 1.05rem;
+  margin-bottom: 0.45em;
+}
+
+.contact-mini-card p {
+  color: var(--text-light);
+  line-height: 1.7;
+  font-size: 0.95rem;
+}
+
+/* RESPONSIVE */
+@media (max-width: 75em) {
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-info-wrap {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 56.25em) {
+  .contact-section {
+    padding: 1em 0 4.5em;
+  }
+
+  .contact-form-card,
+  .main-info-card {
+    padding: 1.5em;
+  }
+
+  .form-grid,
+  .contact-mini-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .form-submit-btn {
+    width: 100%;
+  }
+}
+
+@media (max-width: 30em) {
+  .main-info-card h3 {
+    font-size: 1.5rem;
+  }
+
+  .contact-form-heading h2 {
+    font-size: 1.65rem;
+  }
+}
+
+/*REFERENCE CSS*/
+/* REFERENCES HERO */
+.references-hero {
+  padding-top: 8em;
+  padding-bottom: 2.5em;
+}
+
+/* REFERENCES SECTION */
+.references-section {
+  padding: 2em 0 4.5em;
+}
+
+.references-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.4em;
+}
+
+.reference-card {
+  background: rgba(255, 255, 255, 0.82);
+  border: 0.0625em solid rgba(15, 23, 42, 0.06);
+  border-radius: 1.6em;
+  padding: 1.7em;
+  box-shadow: 0 1.1em 2.6em rgba(15, 23, 42, 0.05);
+  transition: transform 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.reference-card:hover {
+  transform: translateY(-0.35em);
+  box-shadow: 0 1.6em 3em rgba(15, 23, 42, 0.08);
+  border-color: rgba(37, 99, 235, 0.14);
+}
+
+.featured-reference {
+  border: 0.09375em solid rgba(37, 99, 235, 0.18);
+  box-shadow: 0 1.5em 3em rgba(37, 99, 235, 0.08);
+}
+
+/* IMAGE */
+.reference-image {
+  position: relative;
+  width: 100%;
+  height: 14.5em;
+  border-radius: 1.2em;
+  overflow: hidden;
+  margin-bottom: 1.2em;
+  background: #e2e8f0;
+}
+
+.reference-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+.reference-card:hover .reference-image img {
+  transform: scale(1.06);
+}
+
+.reference-image::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(15, 23, 42, 0) 55%,
+    rgba(15, 23, 42, 0.16)
+  );
+  pointer-events: none;
+}
+
+.reference-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6em;
+  background: rgba(15, 23, 42, 0.34);
+  backdrop-filter: blur(0.35em);
+  -webkit-backdrop-filter: blur(0.35em);
+  color: #ffffff;
+  font-weight: 800;
+  font-size: 0.95rem;
+  opacity: 0;
+  transform: translateY(0.5em);
+  transition: all 0.35s ease;
+  z-index: 2;
+}
+
+.reference-card:hover .reference-overlay {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.reference-image-link {
+  position: absolute;
+  inset: 0;
+  z-index: 3;
+}
+
+.reference-top {
+  display: flex;
+  align-items: center;
+  gap: 0.6em;
+  flex-wrap: wrap;
+  margin-bottom: 1em;
+}
+
+.reference-tag {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.55em 0.9em;
+  border-radius: 999em;
+  background: rgba(37, 99, 235, 0.08);
+  color: var(--primary);
+  font-size: 0.78rem;
+  font-weight: 800;
+}
+
+.reference-tag.light {
+  background: rgba(6, 182, 212, 0.10);
+  color: #0891b2;
+}
+
+.reference-card h3 {
+  font-size: 1.45rem;
+  line-height: 1.2;
+  margin-bottom: 0.55em;
+}
+
+.reference-card p {
+  color: var(--text-light);
+  line-height: 1.75;
+  margin-bottom: 1.25em;
+}
+
+.reference-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1em;
+  margin-bottom: 1.5em;
+}
+
+.reference-meta span {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5em;
+  color: var(--text);
+  font-size: 0.92rem;
+  font-weight: 700;
+}
+
+.reference-meta i {
+  color: var(--primary);
+}
+
+.reference-actions {
+  margin-top: auto;
+}
+
+.reference-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  padding: 0.95em 1.3em;
+  border-radius: 999em;
+  background: rgba(37, 99, 235, 0.08);
+  color: var(--primary);
+  font-weight: 800;
+  transition: all 0.35s ease;
+}
+
+.reference-btn:hover {
+  transform: translateY(-0.12em);
+  background: rgba(37, 99, 235, 0.12);
+}
+
+.reference-btn.primary {
+  background: linear-gradient(135deg, var(--primary), #3b82f6);
+  color: #ffffff;
+  box-shadow: 0 1em 2.2em rgba(37, 99, 235, 0.22);
+}
+
+.reference-btn.primary:hover {
+  box-shadow: 0 1.2em 2.6em rgba(37, 99, 235, 0.28);
+}
+
+/* REFERENCE STATS */
+.references-stats-section {
+  padding: 0 0 6em;
+}
+
+.references-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.2em;
+}
+
+.references-stat-card {
+  background: rgba(255, 255, 255, 0.78);
+  border: 0.0625em solid rgba(15, 23, 42, 0.06);
+  border-radius: 1.4em;
+  padding: 1.5em;
+  text-align: center;
+  box-shadow: 0 1em 2em rgba(15, 23, 42, 0.04);
+}
+
+.references-stat-card strong {
+  display: block;
+  font-size: 2rem;
+  line-height: 1;
+  margin-bottom: 0.35em;
+  color: var(--text);
+}
+
+.references-stat-card span {
+  color: var(--text-light);
+  line-height: 1.6;
+}
+
+/* RESPONSIVE */
+@media (max-width: 75em) {
+  .references-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 56.25em) {
+  .references-section {
+    padding: 1em 0 4em;
+  }
+
+  .references-stats-section {
+    padding-bottom: 4.5em;
+  }
+
+  .references-stats-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .reference-card {
+    padding: 1.4em;
+  }
+
+  .reference-image {
+    height: 13em;
+  }
+}
+
+@media (max-width: 30em) {
+  .reference-card h3 {
+    font-size: 1.25rem;
+  }
+
+  .reference-meta {
+    flex-direction: column;
+    gap: 0.7em;
+  }
+
+  .reference-btn {
+    width: 100%;
+  }
+
+  .reference-image {
+    height: 11.5em;
+  }
+}
