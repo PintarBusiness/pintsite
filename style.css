@@ -496,6 +496,7 @@ body {
     pointer-events: none;
     transform: translateY(-1em);
     transition: all 0.5s ease;
+    z-index: 1001;
   }
 
   .header-center.active {
@@ -533,25 +534,76 @@ body {
 
   .hero-container {
     grid-template-columns: 1fr;
-    gap: 2.5em;
+    gap: 2.8em;
   }
 
   .hero-content {
     max-width: 100%;
+    text-align: left;
+  }
+
+  .hero p {
+    max-width: 100%;
+  }
+
+  .hero-stats {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1em;
+  }
+
+  .stat-box {
+    min-width: 0;
+    width: 100%;
   }
 
   .hero-visual {
     min-height: auto;
+    width: 100%;
+    justify-content: center;
   }
 
   .main-card {
     max-width: 100%;
+    transform: none;
+  }
+
+  .card-body {
+    padding-bottom: 2em;
   }
 
   .floating-one,
   .floating-two {
     position: static;
     margin-top: 1em;
+  }
+
+  .floating-box {
+    width: fit-content;
+    max-width: 100%;
+  }
+
+  .services-section,
+  .process-section,
+  .why-section {
+    padding-top: 1em;
+    padding-bottom: 4.5em;
+  }
+
+  .services-grid,
+  .process-grid,
+  .why-grid,
+  .footer-container {
+    grid-template-columns: 1fr;
+  }
+
+  .section-heading {
+    margin-bottom: 2.2em;
+  }
+
+  .cta-box {
+    padding: 3em 1.2em;
+    border-radius: 1.5em;
   }
 }
 
@@ -590,14 +642,17 @@ body {
   .hero-badge {
     font-size: 0.82em;
     padding: 0.65em 0.9em;
+    line-height: 1.4;
   }
 
   .hero h1 {
-    font-size: 2.3rem;
+    font-size: 2.15rem;
+    line-height: 1.05;
   }
 
   .hero p {
     font-size: 1rem;
+    line-height: 1.75;
   }
 
   .hero-buttons {
@@ -611,23 +666,199 @@ body {
   }
 
   .hero-stats {
-    flex-direction: column;
+    grid-template-columns: 1fr;
   }
 
   .stat-box {
     width: 100%;
+    padding: 0.95em 1em;
+  }
+
+  .hero-visual {
+    gap: 0.2em;
+  }
+
+  .main-card {
+    border-radius: 1.4em;
+  }
+
+  .card-top {
+    padding: 0.9em 1em;
   }
 
   .card-body {
-    padding: 1.4em;
+    padding: 1.25em;
+    padding-bottom: 1.4em;
   }
 
   .card-body h3 {
-    font-size: 1.45rem;
+    font-size: 1.35rem;
   }
 
   .mini-features div {
     font-size: 0.92em;
+    padding: 0.85em 0.9em;
+  }
+
+  .floating-box {
+    font-size: 0.86em;
+    padding: 0.85em 1em;
+  }
+
+  .section-heading h2,
+  .why-content h2,
+  .cta-box h2 {
+    font-size: 1.9rem;
+  }
+
+  .service-card,
+  .process-card,
+  .why-card-inner {
+    padding: 1.3em;
+  }
+
+  .why-item {
+    padding: 1em;
+  }
+
+  .cta-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .cta-actions .hero-btn {
+    width: 100%;
+    text-align: center;
+  }
+
+  .footer-container {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .footer-bottom-links {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.7em;
+  }
+}
+
+.hero-content,
+.hero-visual {
+  min-width: 0;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* INDEX HERO MOBILE FIX */
+@media (max-width: 56.25em) {
+  .hero-container {
+    grid-template-columns: 1fr;
+    gap: 2.5em;
+  }
+
+  .hero-visual {
+    width: 100%;
+    min-height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: visible;
+  }
+
+  .main-card {
+    width: 100%;
+    max-width: 32em;
+    margin: 0 auto;
+    transform: none;
+  }
+
+  .card-body {
+    padding-bottom: 1.8em;
+  }
+
+  .floating-one,
+  .floating-two {
+    position: static;
+    margin-top: 1em;
+  }
+
+  .floating-box {
+    width: auto;
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 30em) {
+  .hero {
+    padding: 7.1em 0 3.2em;
+  }
+
+  .hero-container {
+    width: min(94%, 100%);
+    gap: 2em;
+  }
+
+  .hero-content {
+    width: 100%;
+  }
+
+  .hero-visual {
+    width: 100%;
+    align-items: stretch;
+  }
+
+  .main-card {
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    border-radius: 1.25em;
+  }
+
+  .card-top {
+    padding: 0.85em 1em;
+  }
+
+  .card-body {
+    padding: 1.15em;
+    padding-bottom: 1.25em;
+  }
+
+  .card-body h3 {
+    font-size: 1.28rem;
+    line-height: 1.2;
+  }
+
+  .card-body p {
+    font-size: 0.98rem;
+    line-height: 1.7;
+  }
+
+  .mini-features {
+    gap: 0.75em;
+  }
+
+  .mini-features div {
+    padding: 0.8em 0.9em;
+    font-size: 0.9rem;
+  }
+
+  .floating-box {
+    font-size: 0.84rem;
+    padding: 0.8em 0.95em;
+    align-self: flex-start;
+  }
+
+  .floating-two {
+    margin-top: 0.75em;
   }
 }
 
