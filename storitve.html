@@ -38,6 +38,24 @@
 
 <body>
 
+    <script>
+    window.addEventListener("load", () => {
+        const loader = document.getElementById("site-loader");
+        setTimeout(() => {
+        loader.classList.add("hidden");
+        }, 450);
+    });
+    </script>
+    
+    <div class="site-loader" id="site-loader">
+      <div class="site-loader-inner">
+        <div class="loader-logo-wrap">
+          <img src="Logopravitext.png" alt="PintSite logo" class="loader-logo">
+        </div>
+        <div class="loader-line"></div>
+      </div>
+    </div>
+
   <!-- HEADER -->
     <header class="header" id="header">
     <div class="header-inner">
@@ -75,10 +93,10 @@
   <main>
     <!-- HERO -->
     <section class="page-hero services-page-hero">
-      <div class="section-container center">
-        <span class="section-badge">Storitve</span>
-        <h1>Storitve za moderno in <span>profesionalno</span> spletno prisotnost</h1>
-        <p>
+      <div class="section-container center fade-in">
+        <span class="section-badge fade-in fade-delay-1">Storitve</span>
+        <h1 class="fade-in fade-delay-2">Storitve za moderno in <span>profesionalno</span> spletno prisotnost</h1>
+        <p class="fade-in fade-delay-3">
           Izdelam spletne strani, ki niso samo lepe na pogled, ampak tudi hitre,
           pregledne, responsive in pripravljene za dober prvi vtis na spletu.
         </p>
@@ -88,17 +106,17 @@
     <!-- MAIN SERVICES -->
     <section class="services-page-section">
       <div class="section-container">
-        <div class="section-heading center">
-          <span class="section-badge">Kaj ponujam</span>
-          <h2>Glavne storitve</h2>
-          <p>
+        <div class="section-heading center fade-in">
+          <span class="section-badge fade-in fade-delay-1">Kaj ponujam</span>
+          <h2 class="fade-in fade-delay-2">Glavne storitve</h2>
+          <p class="fade-in fade-delay-3">
             Vsaka storitev je usmerjena v to, da tvoje podjetje na spletu izgleda
             sodobno, zaupanja vredno in jasno predstavljeno.
           </p>
         </div>
 
         <div class="services-page-grid">
-          <article class="services-page-card">
+          <article class="services-page-card fade-in fade-delay-1">
             <div class="services-page-icon">
               <i class="fa-solid fa-laptop-code"></i>
             </div>
@@ -109,7 +127,7 @@
             </p>
           </article>
 
-          <article class="services-page-card">
+          <article class="services-page-card fade-in fade-delay-2">
             <div class="services-page-icon">
               <i class="fa-solid fa-arrows-rotate"></i>
             </div>
@@ -119,7 +137,7 @@
             </p>
           </article>
 
-          <article class="services-page-card">
+          <article class="services-page-card fade-in fade-delay-3">
             <div class="services-page-icon">
               <i class="fa-solid fa-mobile-screen-button"></i>
             </div>
@@ -129,7 +147,7 @@
             </p>
           </article>
 
-          <article class="services-page-card">
+          <article class="services-page-card fade-in fade-delay-1">
             <div class="services-page-icon">
               <i class="fa-solid fa-magnifying-glass-chart"></i>
             </div>
@@ -139,7 +157,7 @@
             </p>
           </article>
 
-          <article class="services-page-card">
+          <article class="services-page-card fade-in fade-delay-2">
             <div class="services-page-icon">
               <i class="fa-solid fa-gauge-high"></i>
             </div>
@@ -149,7 +167,7 @@
             </p>
           </article>
 
-          <article class="services-page-card">
+          <article class="services-page-card fade-in fade-delay-3">
             <div class="services-page-icon">
               <i class="fa-solid fa-headset"></i>
             </div>
@@ -167,43 +185,43 @@
       <div class="section-container">
         <div class="services-included-grid">
 
-          <div class="services-included-content">
-            <span class="section-badge">Vključeno</span>
-            <h2>Kaj običajno vključuje izdelava spletne strani</h2>
-            <p>
+          <div class="services-included-content fade-in">
+            <span class="section-badge fade-in fade-delay-1">Vključeno</span>
+            <h2 class="fade-in fade-delay-2">Kaj običajno vključuje izdelava spletne strani</h2>
+            <p class="fade-in fade-delay-3">
               Namen ni samo postaviti stran, ampak ustvariti spletno prisotnost,
               ki izgleda resno, jasno komunicira tvojo ponudbo in deluje na vseh napravah.
             </p>
 
             <div class="services-included-list">
-              <div class="services-included-item">
+              <div class="services-included-item fade-in fade-delay-1">
                 <i class="fa-solid fa-check"></i>
                 <span>Načrt strukture in postavitve strani</span>
               </div>
-              <div class="services-included-item">
+              <div class="services-included-item fade-in fade-delay-2">
                 <i class="fa-solid fa-check"></i>
                 <span>Modern in pregleden dizajn</span>
               </div>
-              <div class="services-included-item">
+              <div class="services-included-item fade-in fade-delay-3">
                 <i class="fa-solid fa-check"></i>
                 <span>Responsive izvedba za vse naprave</span>
               </div>
-              <div class="services-included-item">
+              <div class="services-included-item fade-in fade-delay-4">
                 <i class="fa-solid fa-check"></i>
                 <span>Kontaktna forma in osnovne funkcionalnosti</span>
               </div>
-              <div class="services-included-item">
+              <div class="services-included-item fade-in fade-delay-1">
                 <i class="fa-solid fa-check"></i>
                 <span>Osnovna SEO priprava</span>
               </div>
-              <div class="services-included-item">
+              <div class="services-included-item fade-in fade-delay-2">
                 <i class="fa-solid fa-check"></i>
                 <span>Pomoč pri objavi oziroma zaključku projekta</span>
               </div>
             </div>
           </div>
 
-          <div class="services-included-card">
+          <div class="services-included-card fade-in fade-delay-2">
             <div class="services-included-card-inner">
               <span class="mini-tag">PintSite</span>
               <h3>Spletna stran mora delovati kot predstavitev, ne samo kot dizajn</h3>
@@ -228,16 +246,16 @@
     <!-- PROCESS -->
     <section class="services-process-section">
       <div class="section-container">
-        <div class="section-heading center">
-          <span class="section-badge">Proces</span>
-          <h2>Kako poteka sodelovanje</h2>
-          <p>
+        <div class="section-heading center fade-in">
+          <span class="section-badge fade-in fade-delay-1">Proces</span>
+          <h2 class="fade-in fade-delay-2">Kako poteka sodelovanje</h2>
+          <p class="fade-in fade-delay-3">
             Preprost in jasen proces, da od ideje prideva do končne spletne strani brez nepotrebne zmede.
           </p>
         </div>
 
         <div class="services-process-grid">
-          <article class="services-process-card">
+          <article class="services-process-card fade-in fade-delay-1">
             <div class="services-process-number">01</div>
             <h3>Povpraševanje</h3>
             <p>
@@ -245,7 +263,7 @@
             </p>
           </article>
 
-          <article class="services-process-card">
+          <article class="services-process-card fade-in fade-delay-2">
             <div class="services-process-number">02</div>
             <h3>Načrt in dogovor</h3>
             <p>
@@ -253,7 +271,7 @@
             </p>
           </article>
 
-          <article class="services-process-card">
+          <article class="services-process-card fade-in fade-delay-3">
             <div class="services-process-number">03</div>
             <h3>Izdelava</h3>
             <p>
@@ -261,7 +279,7 @@
             </p>
           </article>
 
-          <article class="services-process-card">
+          <article class="services-process-card fade-in fade-delay-4">
             <div class="services-process-number">04</div>
             <h3>Zaključek in objava</h3>
             <p>
@@ -275,34 +293,34 @@
     <!-- WHO IS IT FOR -->
     <section class="services-for-section">
       <div class="section-container">
-        <div class="section-heading center">
-          <span class="section-badge">Komu je namenjeno</span>
-          <h2>Za koga so te storitve prava izbira</h2>
-          <p>
+        <div class="section-heading center fade-in">
+          <span class="section-badge fade-in fade-delay-1">Komu je namenjeno</span>
+          <h2 class="fade-in fade-delay-2">Za koga so te storitve prava izbira</h2>
+          <p class="fade-in fade-delay-3">
             Storitev je primerna za vse, ki želijo bolj profesionalno in sodobno spletno prisotnost.
           </p>
         </div>
 
         <div class="services-for-grid">
-          <div class="services-for-card">
+          <div class="services-for-card fade-in fade-delay-1">
             <i class="fa-solid fa-building"></i>
             <h3>Podjetja</h3>
             <p>Za podjetja, ki želijo zaupanja vredno in profesionalno predstavitev.</p>
           </div>
 
-          <div class="services-for-card">
+          <div class="services-for-card fade-in fade-delay-2">
             <i class="fa-solid fa-hammer"></i>
             <h3>Obrtniki</h3>
             <p>Za izvajalce in storitve, ki želijo bolj resen nastop na spletu.</p>
           </div>
 
-          <div class="services-for-card">
+          <div class="services-for-card fade-in fade-delay-3">
             <i class="fa-solid fa-store"></i>
             <h3>Lokalne znamke</h3>
             <p>Za lokale, manjše znamke in ponudnike, ki potrebujejo sodobno prisotnost.</p>
           </div>
 
-          <div class="services-for-card">
+          <div class="services-for-card fade-in fade-delay-4">
             <i class="fa-solid fa-user"></i>
             <h3>Osebne znamke</h3>
             <p>Za posameznike, ki želijo jasno in profesionalno predstaviti svoje delo.</p>
@@ -314,15 +332,15 @@
     <!-- CTA -->
     <section class="cta-section">
       <div class="section-container">
-        <div class="cta-box">
-          <span class="section-badge light">Povpraševanje</span>
-          <h2>Potrebuješ spletno stran po meri?</h2>
-          <p>
+        <div class="cta-box fade-in">
+          <span class="section-badge light fade-in fade-delay-1">Povpraševanje</span>
+          <h2 class="fade-in fade-delay-2">Potrebuješ spletno stran po meri?</h2>
+          <p class="fade-in fade-delay-3">
             Pošlji povpraševanje in skupaj pripraviva moderno spletno rešitev,
             ki bo tvoje podjetje predstavila profesionalno in učinkovito.
           </p>
 
-          <div class="cta-actions">
+          <div class="cta-actions fade-in fade-delay-4">
             <a href="kontakt.html" class="hero-btn primary">Pošlji povpraševanje</a>
             <a href="cenik.html" class="hero-btn secondary white">Poglej cenik</a>
           </div>
@@ -335,14 +353,14 @@
   <footer class="footer">
     <div class="footer-container">
       
-      <div class="footer-brand">
+      <div class="footer-brand fade-in">
         <a href="index.html" class="footer-logo">PintSite</a>
         <p>
           Profesionalna izdelava modernih spletnih strani za podjetja, storitve in osebne znamke.
         </p>
       </div>
 
-      <div class="footer-links">
+      <div class="footer-links fade-in fade-delay-1">
         <h4>Navigacija</h4>
         <a href="index.html">Domov</a>
         <a href="reference.html">Reference</a>
@@ -351,14 +369,14 @@
         <a href="kontakt.html">Kontakt</a>
       </div>
 
-      <div class="footer-links">
+      <div class="footer-links fade-in fade-delay-2">
         <h4>Kontakt</h4>
         <a href="mailto:info@pintsite.si">info@pintsite.si</a>
         <a href="tel:+38640123456">+386 40 123 456</a>
         <a href="kontakt.html">Pošlji povpraševanje</a>
       </div>
 
-      <div class="footer-links">
+      <div class="footer-links fade-in fade-delay-3">
         <h4>Sledi mi</h4>
         <div class="social-links">
           <a href="#"><i class="fa-brands fa-instagram"></i> Instagram</a>
@@ -369,11 +387,11 @@
 
     </div>
 
-    <div class="footer-bottom">
+    <div class="footer-bottom fade-in">
       <p>© 2026 PintSite. Vse pravice pridržane.</p>
       <div class="footer-bottom-links">
-        <a href="#">Politika zasebnosti</a>
-        <a href="#">Pogoji uporabe</a>
+        <a href="zasebnost.html">Politika zasebnosti</a>
+        <a href="pogoji.html">Pogoji uporabe</a>
       </div>
     </div>
   </footer>
@@ -399,6 +417,37 @@
         header.classList.remove("scrolled");
       }
     });
+  </script>
+
+  <script>
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("show");
+        }
+      });
+    }, {
+      threshold: 0.15
+    });
+
+    document.querySelectorAll(".fade-in").forEach(el => {
+      observer.observe(el);
+    });
+  </script>
+
+  <script>
+    const parallaxItems = document.querySelectorAll(".services-included-card-inner, .cta-box");
+
+    function handleParallax() {
+      const scrollTop = window.scrollY;
+
+      parallaxItems.forEach((item, index) => {
+        const speed = index === 0 ? 0.025 : 0.02;
+        item.style.transform = `translate3d(0, ${scrollTop * speed}px, 0)`;
+      });
+    }
+
+    window.addEventListener("scroll", handleParallax, { passive: true });
   </script>
 
 </body>

@@ -1408,6 +1408,10 @@ img {
   }
 }
 
+.odmikodfooterja
+{
+  padding-bottom: 5.5em;
+}
 
 /* CENIK CSS */
 /* PRICING HERO */
@@ -2793,12 +2797,13 @@ img {
 
 /* ZASEBNOST IN POGOJI CSS */
 /* LEGAL PAGES */
-.legal-section {
-  padding: 2em 0 6em;
+.legal-hero
+{
+  padding-top: 8em;
 }
 
-.legal-container {
-  max-width: 50em;
+.legal-section {
+  padding: 2em 0 6em;
 }
 
 .legal-container h2 {
@@ -2810,4 +2815,234 @@ img {
 .legal-container p {
   color: var(--text-light);
   line-height: 1.8;
+}
+
+
+/* SCROLL ANIMATIONS */
+.fade-in {
+  opacity: 0;
+  transform: translateY(2.2em);
+  transition:
+    opacity 1.15s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 1.15s cubic-bezier(0.22, 1, 0.36, 1);
+  will-change: transform, opacity;
+}
+
+.fade-in.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* DELAY VARIACIJE (bolj premium, malo daljše) */
+.fade-delay-1 { transition-delay: 0.14s; }
+.fade-delay-2 { transition-delay: 0.26s; }
+.fade-delay-3 { transition-delay: 0.38s; }
+.fade-delay-4 { transition-delay: 0.5s; }
+
+/* MICRO ANIMATIONS */
+.service-card,
+.process-card,
+.why-item,
+.stat-box,
+.references-stat-card,
+.about-stat-card,
+.services-page-card,
+.services-for-card,
+.pricing-card,
+.contact-mini-card,
+.reference-card {
+  transition:
+    transform 0.45s cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow 0.45s cubic-bezier(0.22, 1, 0.36, 1),
+    border-color 0.45s cubic-bezier(0.22, 1, 0.36, 1),
+    background 0.45s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.service-card:hover,
+.process-card:hover,
+.why-item:hover,
+.stat-box:hover,
+.references-stat-card:hover,
+.about-stat-card:hover,
+.services-page-card:hover,
+.services-for-card:hover,
+.contact-mini-card:hover {
+  transform: translateY(-0.4em);
+}
+
+.hero-btn,
+.cta-btn,
+.reference-btn,
+.pricing-btn,
+.form-submit-btn {
+  transition:
+    transform 0.38s cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow 0.38s cubic-bezier(0.22, 1, 0.36, 1),
+    filter 0.38s cubic-bezier(0.22, 1, 0.36, 1),
+    background 0.38s cubic-bezier(0.22, 1, 0.36, 1),
+    border-color 0.38s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.hero-btn:hover,
+.cta-btn:hover,
+.reference-btn:hover,
+.pricing-btn:hover,
+.form-submit-btn:hover {
+  filter: saturate(1.04);
+}
+
+.nav a,
+.footer-links a,
+.social-links a {
+  transition:
+    color 0.34s ease,
+    transform 0.34s ease,
+    opacity 0.34s ease;
+}
+
+.logo img {
+  transition: transform 0.45s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.logo:hover img {
+  transform: scale(1.03);
+}
+
+.service-icon,
+.about-value-icon,
+.services-page-icon,
+.services-for-card i,
+.pricing-info-card i,
+.contact-mini-card i {
+  transition:
+    transform 0.42s cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow 0.42s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.service-card:hover .service-icon,
+.about-value-card:hover .about-value-icon,
+.services-page-card:hover .services-page-icon,
+.services-for-card:hover i,
+.pricing-info-card:hover i,
+.contact-mini-card:hover i {
+  transform: translateY(-0.2em) scale(1.045);
+}
+
+/* soft pulse na badge elementih */
+.hero-badge,
+.section-badge,
+.pricing-label,
+.reference-tag,
+.mini-tag {
+  transition:
+    transform 0.34s cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow 0.34s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.hero-badge:hover,
+.section-badge:hover,
+.pricing-label:hover,
+.reference-tag:hover,
+.mini-tag:hover {
+  transform: translateY(-0.08em);
+}
+
+/* PARALLAX READY */
+.hero-bg,
+.cta-box,
+.why-card-inner,
+.about-intro-card-inner,
+.services-included-card-inner {
+  will-change: transform;
+}
+
+/* LOADER */
+.site-loader {
+  position: fixed;
+  inset: 0;
+  background: rgba(248, 251, 255, 0.96);
+  backdrop-filter: blur(0.4em);
+  -webkit-backdrop-filter: blur(0.4em);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  transition:
+    opacity 0.65s cubic-bezier(0.22, 1, 0.36, 1),
+    visibility 0.65s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.site-loader.hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.site-loader-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.2em;
+}
+
+.loader-logo-wrap {
+  animation: loaderFloat 2s ease-in-out infinite;
+}
+
+.loader-logo {
+  width: 10em;
+  max-width: 42vw;
+  height: auto;
+}
+
+.loader-line {
+  width: 7em;
+  height: 0.22em;
+  border-radius: 999em;
+  background: rgba(37, 99, 235, 0.12);
+  overflow: hidden;
+  position: relative;
+}
+
+.loader-line::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  width: 45%;
+  background: linear-gradient(135deg, var(--primary), var(--accent));
+  border-radius: 999em;
+  animation: loaderRun 1.55s ease-in-out infinite;
+}
+
+/* REFERENCE CARD REVEAL */
+.reveal-card {
+  opacity: 0;
+  transform: translateY(1em) scale(0.985);
+  transition:
+    opacity 0.85s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 0.85s cubic-bezier(0.22, 1, 0.36, 1);
+  will-change: transform, opacity;
+}
+
+.reveal-card.show {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+@keyframes loaderRun {
+  0% {
+    transform: translateX(-120%);
+  }
+  100% {
+    transform: translateX(240%);
+  }
+}
+
+@keyframes loaderFloat {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-0.25em);
+  }
 }

@@ -38,6 +38,24 @@
 
 <body>
 
+    <script>
+    window.addEventListener("load", () => {
+        const loader = document.getElementById("site-loader");
+        setTimeout(() => {
+        loader.classList.add("hidden");
+        }, 450);
+    });
+    </script>
+    
+    <div class="site-loader" id="site-loader">
+      <div class="site-loader-inner">
+        <div class="loader-logo-wrap">
+          <img src="Logopravitext.png" alt="PintSite logo" class="loader-logo">
+        </div>
+        <div class="loader-line"></div>
+      </div>
+    </div>
+
   <!-- HEADER -->
     <header class="header" id="header">
     <div class="header-inner">
@@ -75,10 +93,10 @@
   <main>
     <!-- HERO -->
     <section class="page-hero about-hero">
-      <div class="section-container center">
-        <span class="section-badge">O nas</span>
-        <h1>Gradim spletne strani, ki izgledajo <span>moderno</span> in delujejo <span>profesionalno</span></h1>
-        <p>
+      <div class="section-container center fade-in">
+        <span class="section-badge fade-in fade-delay-1">O nas</span>
+        <h1 class="fade-in fade-delay-2">Gradim spletne strani, ki izgledajo <span>moderno</span> in delujejo <span>profesionalno</span></h1>
+        <p class="fade-in fade-delay-3">
           PintSite je usmerjen v izdelavo sodobnih spletnih strani za podjetja, storitve in znamke,
           ki želijo na spletu pustiti dober prvi vtis in jasno predstaviti svojo ponudbo.
         </p>
@@ -90,37 +108,37 @@
       <div class="section-container">
         <div class="about-intro-grid">
 
-          <div class="about-intro-content">
-            <span class="section-badge">Kdo sem</span>
-            <h2>Moderen pristop k spletni predstavitvi</h2>
-            <p>
+          <div class="about-intro-content fade-in">
+            <span class="section-badge fade-in fade-delay-1">Kdo sem</span>
+            <h2 class="fade-in fade-delay-2">Moderen pristop k spletni predstavitvi</h2>
+            <p class="fade-in fade-delay-3">
               Verjamem, da dobra spletna stran ni samo lepa na pogled. Mora biti pregledna,
               hitra, prilagojena za vse naprave in narejena tako, da obiskovalec hitro razume,
               kdo si in kaj ponujaš.
             </p>
-            <p>
+            <p class="fade-in fade-delay-4">
               Pri vsakem projektu je poudarek na čistem dizajnu, jasni strukturi in profesionalni
               uporabniški izkušnji. Cilj je ustvariti spletno stran, ki izgleda zaupanja vredno
               in podpira rast tvojega podjetja.
             </p>
 
             <div class="about-highlights">
-              <div class="about-highlight">
+              <div class="about-highlight fade-in fade-delay-1">
                 <i class="fa-solid fa-check"></i>
                 <span>Modern in čist dizajn</span>
               </div>
-              <div class="about-highlight">
+              <div class="about-highlight fade-in fade-delay-2">
                 <i class="fa-solid fa-check"></i>
                 <span>Prilagojeno za telefon in računalnik</span>
               </div>
-              <div class="about-highlight">
+              <div class="about-highlight fade-in fade-delay-3">
                 <i class="fa-solid fa-check"></i>
                 <span>Jasna predstavitev podjetja in storitev</span>
               </div>
             </div>
           </div>
 
-          <div class="about-intro-card">
+          <div class="about-intro-card fade-in fade-delay-2">
             <div class="about-intro-card-inner">
               <span class="mini-tag">PintSite</span>
               <h3>Spletna stran je prvi vtis tvoje znamke</h3>
@@ -153,7 +171,7 @@
     <!-- VALUES -->
     <section class="about-values-section">
       <div class="section-container">
-        <div class="section-heading center">
+        <div class="section-heading center fade-in">
           <span class="section-badge">Pristop</span>
           <h2>Na čem temelji moje delo</h2>
           <p>
@@ -162,7 +180,7 @@
         </div>
 
         <div class="about-values-grid">
-          <article class="about-value-card">
+          <article class="about-value-card fade-in fade-delay-1">
             <div class="about-value-icon">
               <i class="fa-solid fa-pen-ruler"></i>
             </div>
@@ -172,7 +190,7 @@
             </p>
           </article>
 
-          <article class="about-value-card">
+          <article class="about-value-card fade-in fade-delay-2">
             <div class="about-value-icon">
               <i class="fa-solid fa-mobile-screen-button"></i>
             </div>
@@ -182,7 +200,7 @@
             </p>
           </article>
 
-          <article class="about-value-card">
+          <article class="about-value-card fade-in fade-delay-3">
             <div class="about-value-icon">
               <i class="fa-solid fa-bolt"></i>
             </div>
@@ -192,7 +210,7 @@
             </p>
           </article>
 
-          <article class="about-value-card">
+          <article class="about-value-card fade-in fade-delay-4">
             <div class="about-value-icon">
               <i class="fa-solid fa-comments"></i>
             </div>
@@ -210,16 +228,16 @@
       <div class="section-container">
         <div class="about-why-grid">
 
-          <div class="about-why-left">
-            <span class="section-badge">Zakaj PintSite</span>
-            <h2>Zakaj stranke iščejo sodobno spletno rešitev</h2>
-            <p>
+          <div class="about-why-left fade-in">
+            <span class="section-badge fade-in fade-delay-1">Zakaj PintSite</span>
+            <h2 class="fade-in fade-delay-2">Zakaj stranke iščejo sodobno spletno rešitev</h2>
+            <p class="fade-in fade-delay-3">
               Danes ni dovolj, da podjetje samo obstaja na spletu. Stran mora obiskovalcu hitro
               pokazati profesionalnost, zaupanje in jasno vrednost storitve ali produkta.
             </p>
 
             <div class="about-why-list">
-              <div class="about-why-item">
+              <div class="about-why-item fade-in fade-delay-1">
                 <i class="fa-solid fa-check"></i>
                 <div>
                   <strong>Močan prvi vtis</strong>
@@ -227,7 +245,7 @@
                 </div>
               </div>
 
-              <div class="about-why-item">
+              <div class="about-why-item fade-in fade-delay-2">
                 <i class="fa-solid fa-check"></i>
                 <div>
                   <strong>Pregledna struktura</strong>
@@ -235,7 +253,7 @@
                 </div>
               </div>
 
-              <div class="about-why-item">
+              <div class="about-why-item fade-in fade-delay-3">
                 <i class="fa-solid fa-check"></i>
                 <div>
                   <strong>Prilagojeno podjetju</strong>
@@ -245,7 +263,7 @@
             </div>
           </div>
 
-          <div class="about-why-right">
+          <div class="about-why-right fade-in fade-delay-2">
             <div class="about-quote-card">
               <i class="fa-solid fa-quote-left"></i>
               <p>
@@ -264,15 +282,15 @@
     <section class="about-stats-section">
       <div class="section-container">
         <div class="about-stats-grid">
-          <div class="about-stat-card">
+          <div class="about-stat-card fade-in fade-delay-1">
             <strong>Modern</strong>
             <span>dizajn in premium občutek</span>
           </div>
-          <div class="about-stat-card">
+          <div class="about-stat-card fade-in fade-delay-2">
             <strong>Responsive</strong>
             <span>telefon, tablica, računalnik</span>
           </div>
-          <div class="about-stat-card">
+          <div class="about-stat-card fade-in fade-delay-3">
             <strong>Clean</strong>
             <span>jasna in prodajna struktura</span>
           </div>
@@ -283,15 +301,15 @@
     <!-- CTA -->
     <section class="cta-section">
       <div class="section-container">
-        <div class="cta-box">
-          <span class="section-badge light">Sodelovanje</span>
-          <h2>Pripravljen na profesionalno spletno stran?</h2>
-          <p>
+        <div class="cta-box fade-in">
+          <span class="section-badge light fade-in fade-delay-1">Sodelovanje</span>
+          <h2 class="fade-in fade-delay-2">Pripravljen na profesionalno spletno stran?</h2>
+          <p class="fade-in fade-delay-3">
             Če želiš sodobno spletno stran, ki bo tvoje podjetje predstavila na pravi način,
             pošlji povpraševanje in skupaj pripraviva pravo rešitev.
           </p>
 
-          <div class="cta-actions">
+          <div class="cta-actions fade-in fade-delay-4">
             <a href="kontakt.html" class="hero-btn primary">Pošlji povpraševanje</a>
             <a href="reference.html" class="hero-btn secondary white">Poglej reference</a>
           </div>
@@ -304,14 +322,14 @@
   <footer class="footer">
     <div class="footer-container">
       
-      <div class="footer-brand">
+      <div class="footer-brand fade-in">
         <a href="index.html" class="footer-logo">PintSite</a>
         <p>
           Profesionalna izdelava modernih spletnih strani za podjetja, storitve in osebne znamke.
         </p>
       </div>
 
-      <div class="footer-links">
+      <div class="footer-links fade-in fade-delay-1">
         <h4>Navigacija</h4>
         <a href="index.html">Domov</a>
         <a href="reference.html">Reference</a>
@@ -320,14 +338,14 @@
         <a href="kontakt.html">Kontakt</a>
       </div>
 
-      <div class="footer-links">
+      <div class="footer-links fade-in fade-delay-2">
         <h4>Kontakt</h4>
         <a href="mailto:info@pintsite.si">info@pintsite.si</a>
         <a href="tel:+38640123456">+386 40 123 456</a>
         <a href="kontakt.html">Pošlji povpraševanje</a>
       </div>
 
-      <div class="footer-links">
+      <div class="footer-links fade-in fade-delay-3">
         <h4>Sledi mi</h4>
         <div class="social-links">
           <a href="#"><i class="fa-brands fa-instagram"></i> Instagram</a>
@@ -338,11 +356,11 @@
 
     </div>
 
-    <div class="footer-bottom">
+    <div class="footer-bottom fade-in">
       <p>© 2026 PintSite. Vse pravice pridržane.</p>
       <div class="footer-bottom-links">
-        <a href="#">Politika zasebnosti</a>
-        <a href="#">Pogoji uporabe</a>
+        <a href="zasebnost.html">Politika zasebnosti</a>
+        <a href="pogoji.html">Pogoji uporabe</a>
       </div>
     </div>
   </footer>
@@ -367,6 +385,23 @@
       } else {
         header.classList.remove("scrolled");
       }
+    });
+  </script>
+
+  <!-- ANIMATION SCRIPT -->
+  <script>
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("show");
+        }
+      });
+    }, {
+      threshold: 0.15
+    });
+
+    document.querySelectorAll(".fade-in").forEach(el => {
+      observer.observe(el);
     });
   </script>
 

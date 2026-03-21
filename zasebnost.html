@@ -38,6 +38,24 @@
 
 <body>
 
+    <script>
+    window.addEventListener("load", () => {
+        const loader = document.getElementById("site-loader");
+        setTimeout(() => {
+        loader.classList.add("hidden");
+        }, 450);
+    });
+    </script>
+    
+    <div class="site-loader" id="site-loader">
+      <div class="site-loader-inner">
+        <div class="loader-logo-wrap">
+          <img src="Logopravitext.png" alt="PintSite logo" class="loader-logo">
+        </div>
+        <div class="loader-line"></div>
+      </div>
+    </div>
+
     <!-- HEADER -->
     <header class="header" id="header">
     <div class="header-inner">
@@ -107,34 +125,95 @@
 <section class="legal-section">
   <div class="section-container legal-container">
 
-    <h2>1. Katere podatke zbiramo</h2>
+    <h2>1. Upravljavec podatkov</h2>
     <p>
-      Ob uporabi kontaktnega obrazca zbiramo: ime, email, telefon in sporočilo.
+      Upravljavec osebnih podatkov je PintSite (Jure Pintar, [vpiši naslov], e-pošta: info@pintsite.si, telefon: +386 40 123 456).
+      Upravljavec se zavezuje, da bo osebne podatke obdeloval v skladu z veljavno zakonodajo, vključno z Uredbo (EU) 2016/679 (GDPR)
+      in Zakonom o varstvu osebnih podatkov.
     </p>
 
-    <h2>2. Namen zbiranja</h2>
+    <h2>2. Katere podatke zbiramo</h2>
     <p>
-      Podatki se uporabljajo izključno za odgovor na povpraševanje in komunikacijo.
+      Ob uporabi spletne strani lahko zbiramo naslednje podatke:
+      - ime in priimek,
+      - e-poštni naslov,
+      - telefonsko številko,
+      - vsebino sporočila, ki jo uporabnik vnese v kontaktni obrazec,
+      - tehnične podatke (IP naslov, podatki o napravi, brskalniku, času dostopa).
     </p>
 
-    <h2>3. Hramba podatkov</h2>
+    <h2>3. Namen obdelave podatkov</h2>
     <p>
-      Podatke hranimo toliko časa, kolikor je potrebno za komunikacijo oziroma sodelovanje.
+      Osebne podatke obdelujemo za naslednje namene:
+      - odgovor na povpraševanje ali vprašanje,
+      - komunikacija z uporabnikom,
+      - priprava ponudbe ali izvedba storitve,
+      - izboljšanje delovanja spletne strani,
+      - zagotavljanje varnosti spletne strani.
     </p>
 
-    <h2>4. Deljenje podatkov</h2>
+    <h2>4. Pravna podlaga</h2>
     <p>
-      Vaših podatkov ne posredujemo tretjim osebam.
+      Osebne podatke obdelujemo na podlagi:
+      - privolitve uporabnika (npr. oddaja obrazca),
+      - izvajanja pogodbe ali povpraševanja pred sklenitvijo pogodbe,
+      - zakonitih interesov (npr. varnost in delovanje spletne strani),
+      - zakonskih obveznosti, kadar je to potrebno.
     </p>
 
-    <h2>5. Pravice uporabnika</h2>
+    <h2>5. Hramba podatkov</h2>
     <p>
-      Uporabnik lahko kadarkoli zahteva vpogled, popravek ali izbris svojih podatkov.
+      Osebne podatke hranimo toliko časa, kolikor je potrebno za namen, zaradi katerega so bili zbrani,
+      oziroma do preklica s strani uporabnika.
+      Podatki, povezani s poslovnim sodelovanjem, se lahko hranijo tudi dlje, če to zahtevajo veljavni predpisi (npr. davčna zakonodaja).
     </p>
 
-    <h2>6. Kontakt</h2>
+    <h2>6. Posredovanje podatkov tretjim osebam</h2>
     <p>
-      Za vsa vprašanja glede zasebnosti: info@pintsite.si
+      Osebnih podatkov ne prodajamo ali posredujemo nepooblaščenim tretjim osebam.
+      Podatki se lahko obdelujejo preko zaupanja vrednih pogodbenih obdelovalcev (npr. ponudniki gostovanja,
+      e-poštnih storitev ali analitike), ki zagotavljajo ustrezno varstvo podatkov in jih obdelujejo izključno
+      v imenu upravljavca.
+    </p>
+
+    <h2>7. Piškotki</h2>
+    <p>
+      Spletna stran lahko uporablja piškotke za zagotavljanje boljše uporabniške izkušnje,
+      analitiko obiska in pravilno delovanje strani.
+      Uporabnik lahko uporabo piškotkov omeji ali onemogoči v nastavitvah svojega brskalnika.
+    </p>
+
+    <h2>8. Pravice uporabnika</h2>
+    <p>
+      Uporabnik ima v zvezi s svojimi osebnimi podatki naslednje pravice:
+      - pravico do dostopa do podatkov,
+      - pravico do popravka netočnih podatkov,
+      - pravico do izbrisa ("pravica do pozabe"),
+      - pravico do omejitve obdelave,
+      - pravico do prenosljivosti podatkov,
+      - pravico do ugovora obdelavi,
+      - pravico do preklica privolitve.
+      Zahtevo lahko uporabnik pošlje na e-poštni naslov: info@pintsite.si.
+    </p>
+
+    <h2>9. Varnost podatkov</h2>
+    <p>
+      Upravljavec uporablja ustrezne tehnične in organizacijske ukrepe za zaščito osebnih podatkov
+      pred nepooblaščenim dostopom, izgubo, zlorabo ali razkritjem.
+      Kljub temu noben sistem ni popolnoma varen, zato popolne varnosti ni mogoče zagotoviti.
+    </p>
+
+    <h2>10. Spremembe politike</h2>
+    <p>
+      Upravljavec si pridržuje pravico do spremembe te politike zasebnosti.
+      Spremembe začnejo veljati z dnem objave na tej spletni strani.
+    </p>
+
+    <h2>11. Kontakt</h2>
+    <p>
+      Za vsa vprašanja, zahteve ali uveljavljanje pravic v zvezi z osebnimi podatki
+      se lahko obrnete na: info@pintsite.si.
+      Če menite, da so vaše pravice kršene, imate pravico vložiti pritožbo pri Informacijskem pooblaščencu Republike Slovenije.
     </p>
 
   </div>
@@ -183,8 +262,8 @@
     <div class="footer-bottom">
         <p>© 2026 PintSite. Vse pravice pridržane.</p>
         <div class="footer-bottom-links">
-        <a href="#">Politika zasebnosti</a>
-        <a href="#">Pogoji uporabe</a>
+        <a href="zasebnost.html">Politika zasebnosti</a>
+        <a href="pogoji.html">Pogoji uporabe</a>
         </div>
     </div>
     </footer>
