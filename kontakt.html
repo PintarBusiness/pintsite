@@ -94,8 +94,8 @@
     <!-- HERO -->
     <section class="page-hero contact-hero">
       <div class="section-container center fade-in">
-        <span class="section-badge fade-in fade-delay-1">Kontakt</span>
-        <h1 class="fade-in fade-delay-2">Stopiva v <span>kontakt</span></h1>
+        <span class="section-badge fade-in fade-delay-1" id="kontakt-obrazec">Kontakt</span>
+        <h1 class="fade-in fade-delay-2">Stopiva v <span class="modernapisgradient">kontakt</span></h1>
         <p class="fade-in fade-delay-3">
           Imaš idejo za novo spletno stran, prenovo obstoječe ali želiš ponudbo?
           Pošlji sporočilo in skupaj pogledava, kaj je najboljša rešitev za tvoj projekt.
@@ -168,6 +168,18 @@
             </div>
           </div>
 
+          <script>
+            document.addEventListener("DOMContentLoaded", function () {
+              const params = new URLSearchParams(window.location.search);
+              const paket = params.get("paket");
+              const select = document.getElementById("paket");
+
+              if (paket && select) {
+                select.value = paket;
+              }
+            });
+          </script>
+
           <!-- RIGHT -->
           <div class="contact-info-wrap fade-in">
             <div class="contact-info-card main-info-card">
@@ -191,7 +203,7 @@
                   <i class="fa-solid fa-phone"></i>
                   <div>
                     <strong>Telefon</strong>
-                    <span>+386 40 123 456</span>
+                    <span>+386 69 671 987</span>
                   </div>
                 </div>
 
@@ -248,7 +260,7 @@
         <div class="footer-links">
           <h4>Kontakt</h4>
           <a href="mailto:info@pintsite.si">info@pintsite.si</a>
-          <a href="tel:+38640123456">+386 40 123 456</a>
+          <a href="tel:+38640123456">+386 69 671 987</a>
           <a href="kontakt.html">Pošlji povpraševanje</a>
         </div>
 

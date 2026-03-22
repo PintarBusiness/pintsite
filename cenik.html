@@ -118,7 +118,7 @@
     <section class="page-hero pricing-hero">
       <div class="section-container center fade-in">
         <span class="section-badge fade-in fade-delay-1">Cenik</span>
-        <h1 class="fade-in fade-delay-2">Izberi paket, ki najbolj ustreza tvojemu <span>podjetju</span></h1>
+        <h1 class="fade-in fade-delay-2">Izberi paket, ki najbolj ustreza <span class="modernapisgradient">tvojemu podjetju</span></h1>
         <p class="fade-in fade-delay-3">
           Jasna in profesionalna ponudba za izdelavo moderne spletne strani.
           Izberi rešitev glede na obseg, cilje in željen nivo predstavitve.
@@ -138,7 +138,7 @@
               <h2>Za odličen začetek</h2>
               <p>
                 Primeren paket za manjša podjetja, obrtnike in posameznike,
-                ki želijo profesionalno spletno predstavitev.
+                ki želijo osnovno profesionalno spletno predstavitev.
               </p>
             </div>
 
@@ -148,23 +148,24 @@
             </div>
 
             <ul class="pricing-features">
-              <li><i class="fa-solid fa-check"></i> Moderna 1–3 podstrani</li>
-              <li><i class="fa-solid fa-check"></i> Responsive dizajn</li>
+              <li><i class="fa-solid fa-check"></i> Vsebina do 3 podstrani</li>
+              <li><i class="fa-solid fa-check"></i> Prilagojeno za mobilne naprave</li>
               <li><i class="fa-solid fa-check"></i> Kontaktna sekcija</li>
+              <li><i class="fa-solid fa-check"></i> Galerija in zemljevid lokacije</li>
               <li><i class="fa-solid fa-check"></i> Osnovna SEO priprava</li>
               <li><i class="fa-solid fa-check"></i> Hitra in čista postavitev</li>
             </ul>
 
-            <a href="kontakt.html" class="pricing-btn">Izberi Start</a>
+            <a href="kontakt.html?paket=start#kontakt-obrazec" class="pricing-btn">Izberi Start</a>
           </article>
 
           <!-- GROWTH -->
           <article class="pricing-card featured fade-in fade-delay-2">
-            <div class="pricing-badge">Najbolj izbrano</div>
+            <div class="pricing-badge">Najbolj priljubljeno</div>
 
             <div class="pricing-top">
               <span class="pricing-label">Growth</span>
-              <h2>Najboljše razmerje</h2>
+              <h2>Za rast podjetja</h2>
               <p>
                 Prava izbira za podjetja, ki želijo bolj dodelano spletno stran,
                 več vsebine in močnejši profesionalen vtis.
@@ -177,22 +178,22 @@
             </div>
 
             <ul class="pricing-features">
-              <li><i class="fa-solid fa-check"></i> Moderna 4–6 podstrani</li>
-              <li><i class="fa-solid fa-check"></i> Premium responsive dizajn</li>
+              <li><i class="fa-solid fa-check"></i> Vsebina do 6 podstrani</li>
               <li><i class="fa-solid fa-check"></i> Naprednejša struktura vsebine</li>
-              <li><i class="fa-solid fa-check"></i> SEO osnova + boljša priprava</li>
+              <li><i class="fa-solid fa-check"></i> Osnovne animacije</li>
+              <li><i class="fa-solid fa-check"></i> Blog vsebina</li>
               <li><i class="fa-solid fa-check"></i> Sekcije za storitve / reference</li>
-              <li><i class="fa-solid fa-check"></i> Večji fokus na konverziji</li>
+              <li><i class="fa-solid fa-check"></i> Vse kar vsebuje Start paket</li>
             </ul>
 
-            <a href="kontakt.html" class="pricing-btn featured-btn">Izberi Growth</a>
+            <a href="kontakt.html?paket=growth#kontakt-obrazec" class="pricing-btn featured-btn">Izberi Growth</a>
           </article>
 
           <!-- PREMIUM -->
           <article class="pricing-card fade-in fade-delay-3">
             <div class="pricing-top">
               <span class="pricing-label">Premium</span>
-              <h2>Za resen nastop</h2>
+              <h2>Za profesionalen nastop</h2>
               <p>
                 Za podjetja in znamke, ki želijo najmočnejši vtis,
                 bolj unikatno strukturo in višji nivo predstavitve.
@@ -205,20 +206,34 @@
             </div>
 
             <ul class="pricing-features">
-              <li><i class="fa-solid fa-check"></i> Večstranska premium predstavitev</li>
-              <li><i class="fa-solid fa-check"></i> Unikatnejši dizajn</li>
-              <li><i class="fa-solid fa-check"></i> Napredna struktura strani</li>
+              <li><i class="fa-solid fa-check"></i> Neomejeno podstrani</li>
+              <li><i class="fa-solid fa-check"></i> Unikaten dizajn</li>
+              <li><i class="fa-solid fa-check"></i> Admin - nadzorna plošča</li>
               <li><i class="fa-solid fa-check"></i> Več sekcij in prodajni fokus</li>
               <li><i class="fa-solid fa-check"></i> SEO priprava in optimizacija</li>
-              <li><i class="fa-solid fa-check"></i> Prioritetna izvedba</li>
+              <li><i class="fa-solid fa-check"></i> Vse kar vsebuje Growth paket</li>
             </ul>
 
-            <a href="kontakt.html" class="pricing-btn">Izberi Premium</a>
+            <a href="kontakt.html?paket=premium#kontakt-obrazec" class="pricing-btn">Izberi Premium</a>
           </article>
 
         </div>
       </div>
     </section>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const params = new URLSearchParams(window.location.search);
+        const paket = params.get("paket");
+        const select = document.getElementById("paket");
+
+        if (paket && select) {
+          const allowedValues = ["start", "growth", "premium", "custom"];
+          if (allowedValues.includes(paket)) {
+            select.value = paket;
+          }
+        }
+      });
+    </script>
 
     <!-- INFO -->
     <section class="pricing-info-section">
@@ -304,7 +319,7 @@
         <div class="footer-links">
           <h4>Kontakt</h4>
           <a href="mailto:info@pintsite.si">info@pintsite.si</a>
-          <a href="tel:+38640123456">+386 40 123 456</a>
+          <a href="tel:+38640123456">+386 69 671 987</a>
           <a href="kontakt.html">Pošlji povpraševanje</a>
         </div>
 

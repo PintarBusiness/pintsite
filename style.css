@@ -227,7 +227,7 @@ body {
   margin-bottom: 0.45em;
 }
 
-.hero h1 span {
+.hero h1 span, .modernapisgradient {
   background: linear-gradient(135deg, var(--primary), var(--accent));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
