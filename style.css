@@ -2834,10 +2834,10 @@ img {
 }
 
 /* DELAY VARIACIJE (bolj premium, malo daljše) */
-.fade-delay-1 { transition-delay: 0.14s; }
+.fade-delay-1 { transition-delay: 0.26s; }
 .fade-delay-2 { transition-delay: 0.26s; }
-.fade-delay-3 { transition-delay: 0.38s; }
-.fade-delay-4 { transition-delay: 0.5s; }
+.fade-delay-3 { transition-delay: 0.26s; }
+.fade-delay-4 { transition-delay: 0.26s; }
 
 /* MICRO ANIMATIONS */
 .service-card,
@@ -3044,5 +3044,39 @@ img {
   }
   50% {
     transform: translateY(-0.25em);
+  }
+}
+
+@media (max-width: 30em) {
+  .header-inner,
+  .hero-container,
+  .section-container,
+  .footer-container,
+  .footer-bottom,
+  .legal-container {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .services-process-section
+  {
+    padding-top: 5em;
+  }
+
+  .odmikwhy
+  {
+    margin-top: -5em;
+  }
+
+  .odmikcta
+  {
+    padding-bottom: 10em;
+  }
+
+  .odmikctastoritve
+  {
+    margin-top: -7em;
+    margin-bottom: 8em;
   }
 }
