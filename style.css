@@ -1133,9 +1133,8 @@ img {
   text-align: center;
   padding: 4em 1.5em;
   border-radius: 2em;
-    
-  background: #ffffff;
-  border: 0.0625em solid rgba(15, 23, 42, 0.06);
+  background-image: url(Images/ozadjecta.png);
+  background-size: cover;
   box-shadow: 0 1.5em 3.5em rgba(15, 23, 42, 0.08);
 }
 
