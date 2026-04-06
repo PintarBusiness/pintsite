@@ -48,7 +48,7 @@ $sporocilo
 ";
 
 /* HEADERS */
-$headers = "From: PintSite Obrazec <no-reply@pintsite.si>\r\n";
+$headers = "From: PintSite <info@pintsite.si>\r\n";
 $headers .= "Reply-To: $email\r\n";
 $headers .= "Content-Type: text/plain; charset=UTF-8\r\n";
 
