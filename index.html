@@ -33,7 +33,98 @@
 
   <!-- CSS -->
   <link rel="stylesheet" href="style.css">
+
+  <!-- GOOGLE ANALYTICS + CONSENT MODE -->
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+
+    /* PRIVZETO: analytics izklopljen */
+    gtag('consent', 'default', {
+      'analytics_storage': 'denied'
+    });
+  </script>
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+
+  <script>
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXXXXX');
+  </script>
 </head>
+
+<!-- COOKIE BANNER -->
+<div class="cookie-banner" id="cookie-banner" role="dialog" aria-live="polite" aria-label="Obvestilo o piškotkih">
+  <div class="cookie-banner-inner">
+    <div class="cookie-banner-text">
+      <h3>Piškotki</h3>
+      <p>
+        Spletna stran uporablja nujne piškotke za delovanje strani. Analitični piškotki se uporabljajo samo z vašim soglasjem.
+        Več informacij najdete v <a href="zasebnost.html">politiki zasebnosti</a>.
+      </p>
+    </div>
+
+    <div class="cookie-banner-actions">
+      <button type="button" class="cookie-btn cookie-btn-secondary" id="cookie-decline">
+        Zavrni
+      </button>
+      <button type="button" class="cookie-btn cookie-btn-primary" id="cookie-accept">
+        Sprejmi
+      </button>
+    </div>
+  </div>
+</div>
+
+<script>
+  (function () {
+    const COOKIE_KEY = "pintsite_cookie_consent";
+    const banner = document.getElementById("cookie-banner");
+    const acceptBtn = document.getElementById("cookie-accept");
+    const declineBtn = document.getElementById("cookie-decline");
+
+    function applyConsent(value) {
+      if (value === "accepted") {
+        gtag('consent', 'update', {
+          'analytics_storage': 'granted'
+        });
+      } else {
+        gtag('consent', 'update', {
+          'analytics_storage': 'denied'
+        });
+      }
+    }
+
+    function saveConsent(value) {
+      localStorage.setItem(COOKIE_KEY, value);
+      applyConsent(value);
+      banner.classList.remove("show");
+    }
+
+    function getConsent() {
+      return localStorage.getItem(COOKIE_KEY);
+    }
+
+    document.addEventListener("DOMContentLoaded", function () {
+      const consent = getConsent();
+
+      if (!consent) {
+        setTimeout(() => {
+          banner.classList.add("show");
+        }, 700);
+      } else {
+        applyConsent(consent);
+      }
+    });
+
+    acceptBtn.addEventListener("click", function () {
+      saveConsent("accepted");
+    });
+
+    declineBtn.addEventListener("click", function () {
+      saveConsent("declined");
+    });
+  })();
+</script>
 
 <body>
     <script>
