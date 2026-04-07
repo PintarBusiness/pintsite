@@ -152,7 +152,7 @@ try {
     $mail->Host       = 'sh29.neoserv.si';
     $mail->SMTPAuth   = true;
     $mail->Username   = 'info@pintsite.si';
-    $mail->Password   = 'Pint-Site2007';
+    $mail->Password   = 'HE HE HE skrivnost';
     $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;
     $mail->Port       = 465;
 
