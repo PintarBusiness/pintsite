@@ -14,17 +14,15 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     ) {
 
         session_regenerate_id(true);
-
         $_SESSION["admin_logged"] = true;
 
         header("Location: dashboard.php");
         exit;
     } else {
-        $error = "Napačni podatki.";
+        $error = "Napačni prijavni podatki.";
     }
 }
 ?>
-
 <!DOCTYPE html>
 <html lang="sl">
 <head>
@@ -34,41 +32,47 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
 <link rel="stylesheet" href="../style.css">
 <link rel="stylesheet" href="admin.css">
-
 <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
 </head>
 
-<body class="admin-body">
+<body class="login-body">
 
-<div class="admin-login-card">
+<div class="login-card">
 
-    <img src="../Logopravitext.png" class="admin-logo">
+<div class="login-glow"></div>
 
-    <h1>Admin prijava</h1>
+<img src="../Logopravitext.png" class="admin-logo">
 
-    <?php if($error): ?>
-        <div class="admin-error">
-            <?= $error ?>
-        </div>
-    <?php endif; ?>
+<h1>PintSite Admin</h1>
 
-    <form method="POST">
+<p class="login-subtitle">
+Premium nadzorna plošča za upravljanje računov in strank.
+</p>
 
-        <div class="form-group">
-            <label>Uporabniško ime</label>
-            <input type="text" name="username" required>
-        </div>
+<?php if($error): ?>
+<div class="admin-error">
+<?= $error ?>
+</div>
+<?php endif; ?>
 
-        <div class="form-group">
-            <label>Geslo</label>
-            <input type="password" name="password" required>
-        </div>
+<form method="POST">
 
-        <button class="admin-btn">
-            Prijava
-        </button>
+<div class="form-group">
+<label>Uporabniško ime</label>
+<input type="text" name="username" required>
+</div>
 
-    </form>
+<div class="form-group">
+<label>Geslo</label>
+<input type="password" name="password" required>
+</div>
+
+<button class="primary-btn">
+Prijava v sistem
+</button>
+
+</form>
 
 </div>
 
