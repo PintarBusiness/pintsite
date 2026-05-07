@@ -157,7 +157,7 @@ Pošlji račun
 </div>
 
 <div class="summary-total">
-<span>SKUPAJ</span>
+<span>SKUPAJ Z DDV</span>
 <strong id="p-price">0 €</strong>
 </div>
 
