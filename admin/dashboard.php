@@ -29,8 +29,9 @@ $invoiceNumber = "PS-" . date("Y") . "-" . rand(100,999);
 
 function updatePreview(){
 
+/* Stranka */
 document.getElementById("p-company").innerText =
-document.getElementById("company").value;
+document.getElementById("company").value || "Podjetje d.o.o.";
 
 document.getElementById("p-person").innerText =
 document.getElementById("person").value;
@@ -44,26 +45,39 @@ document.getElementById("city").value;
 document.getElementById("p-phone").innerText =
 document.getElementById("phone").value;
 
-document.getElementById("p-tax").innerText =
-document.getElementById("tax").value;
-
 document.getElementById("p-email").innerText =
-document.getElementById("email").value;
+document.getElementById("email").value || "mail@example.com";
 
+document.getElementById("p-tax").innerText =
+document.getElementById("tax").value ? "DDV: " + document.getElementById("tax").value : "";
+
+/* Paket */
 document.getElementById("p-package").innerText =
 document.getElementById("package").value;
 
+/* Plačilo */
 document.getElementById("p-payment").innerText =
 document.getElementById("payment").value;
 
+/* Cena */
 document.getElementById("p-price").innerText =
-document.getElementById("price").value + " €";
+(document.getElementById("price").value || "0") + " €";
 
-document.getElementById("p-desc").innerHTML =
-document.getElementById("description").value
-.split("\n")
-.map(x => "<li>" + x + "</li>")
-.join("");
+/* Opis */
+var desc = document.getElementById("description").value;
+if(desc.trim()){
+    document.getElementById("p-desc").innerHTML =
+        "<ul style='padding-left:18px;line-height:1.9;font-size:14px;'>" +
+        desc.split("\n").filter(x => x.trim()).map(x => "<li>" + x + "</li>").join("") +
+        "</ul>";
+} else {
+    document.getElementById("p-desc").innerHTML =
+        "<ul style='padding-left:18px;line-height:1.9;font-size:14px;'><li>—</li></ul>";
+}
+
+/* Namen plačila */
+document.getElementById("p-invoice-ref").innerText =
+document.getElementById("invoice").value;
 
 }
 
@@ -246,6 +260,8 @@ required>
 <input
 type="text"
 name="invoice"
+id="invoice"
+oninput="updatePreview()"
 value="<?= $invoiceNumber ?>">
 </div>
 
@@ -270,113 +286,112 @@ Pošlji račun
 
 </div>
 
+<!-- PREVIEW -->
 <div class="preview-side">
 
 <div class="invoice-preview">
 
+<!-- HEADER -->
 <div class="invoice-header">
-
 <div class="invoice-top">
 
+<div>
 <img src="../Logopravitext.png">
+<div style="margin-top:14px;font-size:13px;line-height:1.8;color:rgba(255,255,255,.85);">
+<strong style="color:white;font-size:15px;">PintSite</strong><br>
+Jure Pintar<br>
+info@pintsite.si<br>
++386 XX XXX XXX
+</div>
+</div>
 
-<div class="invoice-title">
-
+<div class="invoice-title" style="text-align:right;">
 <h2>RAČUN</h2>
-
 <div class="invoice-meta">
 <p><?= $invoiceNumber ?></p>
 <p>Datum: <?= $today ?></p>
 <p>Rok plačila: <?= $due ?></p>
+<p style="margin-top:10px;opacity:.7;font-size:12px;">Status: <strong>ČAKA NA PLAČILO</strong></p>
+</div>
 </div>
 
 </div>
-
 </div>
 
-</div>
-
+<!-- VSEBINA -->
 <div class="invoice-content">
 
 <div class="invoice-grid">
 
 <div class="invoice-box">
-
 <h4>Stranka</h4>
-
-<p id="p-company">Podjetje d.o.o.</p>
-
-<p id="p-person">Marko Novak</p>
-
-<p id="p-address">Dunajska cesta 1</p>
-
-<p id="p-city">1000 Ljubljana</p>
-
-<p id="p-phone">+386 41 123 456</p>
-
-<p id="p-email">mail@example.com</p>
-
-<p id="p-tax">SI12345678</p>
-
+<p>
+<strong id="p-company">Podjetje d.o.o.</strong><br>
+<span id="p-person"></span><br>
+<span id="p-address"></span><br>
+<span id="p-city"></span><br>
+<span id="p-phone"></span><br>
+<span id="p-email">mail@example.com</span><br>
+<span id="p-tax"></span>
+</p>
 </div>
 
 <div class="invoice-box">
-
 <h4>Paket</h4>
-
-<p id="p-package">Premium</p>
-
+<p><strong id="p-package">Start</strong></p>
 </div>
 
 </div>
 
-<div class="invoice-box">
-
+<div class="invoice-box" style="margin-bottom:0;">
 <h4>Opis storitev</h4>
-
-<ul id="p-desc">
-<li>Moderna premium spletna stran</li>
-<li>Responsive optimizacija</li>
-<li>SEO osnova</li>
-</ul>
-
+<div id="p-desc">
+<ul style="padding-left:18px;line-height:1.9;font-size:14px;"><li>—</li></ul>
+</div>
 </div>
 
+<!-- SKUPAJ -->
 <div class="summary-box">
-
-
-
-<div class="summary-row">
-<span>Status</span>
-<strong>ČAKA NA PLAČILO</strong>
-</div>
 
 <div class="summary-row">
 <span>Način plačila</span>
 <strong id="p-payment">Nakazilo na TRR</strong>
 </div>
 
+<div class="summary-row">
+<span>DDV</span>
+<strong>Ni zavezanec</strong>
+</div>
+
 <div class="summary-total">
-
 <span>SKUPAJ (VKLJUČNO Z DDV)</span>
-
 <h3 id="p-price">0 €</h3>
-
 </div>
 
 </div>
 
+<!-- PLAČILNI PODATKI -->
+<div style="margin-top:20px;background:#f0fdf4;border:1px solid #bbf7d0;padding:24px;border-radius:20px;">
+<h4 style="font-size:11px;text-transform:uppercase;letter-spacing:1px;color:#16a34a;margin-bottom:12px;">Podatki za plačilo</h4>
+<p style="font-size:13px;line-height:1.9;color:#0f172a;">
+<strong>Prejemnik:</strong> Jure Pintar – PintSite<br>
+<strong>TRR:</strong> SI56 XXXX XXXX XXXX XXX<br>
+<strong>BIC/SWIFT:</strong> XXXXXXXX<br>
+<strong>Namen:</strong> Plačilo računa <span id="p-invoice-ref"><?= $invoiceNumber ?></span><br>
+<strong>Rok plačila:</strong> <?= $due ?>
+</p>
+</div>
+
+<!-- FOOTER -->
 <div class="invoice-footer">
-
 <div>
-<h4>PintSite</h4>
-<p>info@pintsite.si</p>
+<h4>PintSite – Jure Pintar</h4>
+<p>info@pintsite.si | +386 XX XXX XXX</p>
+<p style="margin-top:4px;font-size:12px;color:#64748b;">Hvala za vaše zaupanje!</p>
 </div>
-
 <div class="invoice-badge">
-Premium invoice system
+PintSite Invoice System
 </div>
-
 </div>
 
 </div>
