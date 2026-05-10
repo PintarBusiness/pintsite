@@ -8,7 +8,7 @@ if(!isset($_SESSION["admin_logged"])){
 
 $today = date("d.m.Y");
 $due = date("d.m.Y", strtotime("+7 days"));
-$invoiceNumber = "PS-" . date("Y") . "-" . rand(100,999);
+$invoiceNumber = peekInvoiceNumber();
 ?>
 
 <!DOCTYPE html>
@@ -95,9 +95,14 @@ document.getElementById("invoice").value;
 
 <img src="../Logopravitext.png" class="dash-logo">
 
+<div style="display:flex;flex-direction:column;gap:8px;">
+<a href="invoices.php" style="display:flex;align-items:center;gap:8px;padding:10px 16px;border-radius:14px;background:rgba(37,99,235,.1);color:#2563eb;text-decoration:none;font-weight:700;font-size:13px;">
+📄 Poslani računi
+</a>
 <a href="logout.php" class="logout-btn">
 Odjava
 </a>
+</div>
 
 </div>
 
@@ -122,6 +127,12 @@ Odjava
 <p class="panel-subtitle">
 Pošlji profesionalen račun direktno na email stranke.
 </p>
+
+<?php if(isset($_GET['success'])): ?>
+<div style="background:#dcfce7;border:1px solid #86efac;border-radius:14px;padding:14px 18px;margin-bottom:16px;color:#166534;font-weight:600;font-size:14px;">
+✅ Račun poslan s PDF prilogo! <a href="invoices.php" style="color:#15803d;font-weight:800;">Oglej si →</a>
+</div>
+<?php endif; ?>
 
 <form action="send_invoice.php" method="POST">
 
