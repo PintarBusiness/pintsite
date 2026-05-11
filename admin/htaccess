@@ -1,6 +1,0 @@
-Options -Indexes
-
-<Files "invoice_counter.txt">
-    Order allow,deny
-    Deny from all
-</Files>
